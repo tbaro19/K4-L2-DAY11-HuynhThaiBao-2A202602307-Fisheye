@@ -1,9 +1,10 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,20,"Bỏ sót vật thể nhỏ ở tầm xa hoặc nhận diện sai kích thước xe di chuyển tốc độ cao","Thiết lập baseline cho luồng giao thông đối diện và làn đường chính diện"
+front,hard,35,"Chói sáng trực tiếp (glare/headlight), người đi bộ băng cắt nhanh ở mép kính, thời tiết bất lợi","Camera trước đối mặt rủi ro va chạm trực diện cao nhất và vận tốc tương đối lớn nhất nên cần ưu tiên ngân sách hard lớn nhất"
+rear,normal,20,"Ước lượng sai khoảng cách và tốc độ tiếp cận của xe bám đuôi phía sau","Thiết lập baseline khi xe lùi thẳng hoặc xe phía sau di chuyển ở cự ly bình thường"
+rear,hard,30,"Ống kính bám bẩn/nước bắn, chói đèn pha xe sau ban đêm, điểm mù sát cản sau có trẻ em hoặc vật cản thấp","Camera lùi có nguy cơ an toàn cao khi lùi đỗ xe trong không gian hẹp và dễ bị suy giảm chất lượng quang học"
+left,normal,20,"Méo hình fisheye làm sai lệch tỷ lệ kích thước phương tiện đi song song","Giám sát baseline phương tiện làn bên trái khi xe chạy thẳng hoặc chuẩn bị chuyển làn"
+left,hard,25,"Xe máy/xe đạp vượt sát sườn ở vùng méo rìa (edge zone), vùng seam nối camera trước/sau bị biến dạng","Mật độ xe hai bánh vượt bên trái cao trong giao thông đô thị, rủi ro cắt góc và sai lệch vùng seam"
+right,normal,20,"Biến dạng quang học ở rìa ngoài làm nhận diện sai lề đường và chướng ngại vật tĩnh","Giám sát baseline phía lề đường bên phải và vỉa hè khi di chuyển ổn định"
+right,hard,30,"Điểm mù góc phụ rộng, người đi bộ bước từ vỉa hè xuống, xe rẽ phải cắt đầu, vạch ô đỗ bị che khuất","Kịch bản rẽ phải, tấp lề và ghép xe vào ô đỗ bên phải tiềm ẩn nguy cơ va quẹt cao nhất với người đi bộ và xe đạp"
+

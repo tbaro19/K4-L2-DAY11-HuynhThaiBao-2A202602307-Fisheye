@@ -1,1 +1,34 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,E1_annotator_error,P1,annotator,R03,"Vẽ trùng thêm 1 box Bike nhỏ bên trong xe máy L2 đã vẽ; theo R03 người lái và xe gộp chung 1 box",rework,v1.0.0,Xóa box L6 thừa
+calib,C0,adasind_019560.jpg,R4,na,MISSING,E1_annotator_error,P1,annotator,R01,"Bỏ sót xe hai bánh Bike ở bên phải khung hình (tọa độ x:888-966, y:801-895) có chiều cao H > 40px",rework,v1.0.0,Bổ sung box Bike ở mép phải
+calib,C0,adasind_019560.jpg,L1,na,IGNORE_SCOPE,E2_guideline_gap,P2,guideline,R07,"Polygon ego_body vẽ bao cản trước rộng hơn so với reference nhưng chuẩn theo hình học thân xe nhìn thấy",keep_with_reason,v1.0.0,Giữ nguyên ego_body vì phản ánh đúng thân xe ego thực tế
+r2_qa,B1-dense,adasind_001320.jpg,L1,L_only,ATTRIBUTE,,P2,annotator,R05,"ThreeWheeler ở sát mép trái cắt cụt bởi viền ảnh/vòng kính, cần kiểm tra thuộc tính truncated=true",keep_with_reason,v1.0.0,Soát thuộc tính truncated
+r2_qa,B1-dense,adasind_012570.jpg,L9,L_only,BOX_GEOMETRY,,P1,annotator,R02,"Ô tô Car ở mép trái chịu độ méo quang học lớn ở edge zone, box cần bám sát phần thấy được trên ảnh gốc theo R02",rework,v1.0.0,Kiểm tra ranh giới box ở rìa kính
+r2_qa,B1-dense,adasind_036720.jpg,L4,L_only,ATTRIBUTE,,P2,annotator,R03,"Bike ở mép trái đã gộp đúng người lái theo R03, cần soát thêm occluded do xe trước che",keep_with_reason,v1.0.0,Soát occluded
+r2_qa,B1-dense,adasind_012570.jpg,L7,L_only,BOX_GEOMETRY,,P2,annotator,R01,"Xe ô tô Car hậu cảnh trung tâm h=53.6px sát ngưỡng H=40px, kiểm tra box tiếp đất",keep_with_reason,v1.0.0,Kiểm tra ngưỡng chiều cao
+r1_craft,B1-dense,adasind_001320.jpg,R4,na,MISSING,E1_annotator_error,P1,annotator,R01,"Bỏ sót người đi bộ Pedestrian (x:80-120 y:852-965) do bị ThreeWheeler che khuất một phần",rework,v1.0.0,Cần bổ sung ở P5
+r1_craft,B1-dense,adasind_012570.jpg,L3+R9,na,BOX_GEOMETRY,E1_annotator_error,P2,annotator,R02,"Lệch nhẹ IoU box Bike ở hậu cảnh do độ méo thấu kính fisheye",keep_with_reason,v1.0.0,IoU đạt chuẩn chấp nhận
+r1_craft,B1-dense,adasind_036720.jpg,L2+R1,na,BOX_GEOMETRY,E1_annotator_error,P2,annotator,R02,"ThreeWheeler L2 tiền cảnh bên phải kích thước lớn ôm sát thân xe",keep_with_reason,v1.0.0,Khớp chuẩn với reference
+r3_diag,B1-dense,adasind_001320.jpg,L1+R6,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,"Model bỏ sót ThreeWheeler ở vùng rìa mép trái do domain gap ảnh fisheye",keep_with_reason,v1.0.0,L và R đều nhận diện đúng
+r3_diag,B1-dense,adasind_001320.jpg,L5+R3,LR_noM,MISSING,E4_model_domain,P2,ai_team,R04,"Model bỏ sót ThreeWheeler do bị xe khác che khuất một phần",keep_with_reason,v1.0.0,Occlusion phức tạp
+r3_diag,B1-dense,adasind_001320.jpg,L3+R5,LR_noM,MISSING,E4_model_domain,P2,ai_team,R04,"Model bỏ sót ThreeWheeler nhỏ ở hậu cảnh xa",keep_with_reason,v1.0.0,Vật thể kích thước nhỏ
+r3_diag,B1-dense,adasind_001320.jpg,R4+M1,RM_noL,MISSING,E1_annotator_error,P1,annotator,R01,"Pedestrian R4 bị người vẽ bỏ sót nhưng cả Reference và Model đều phát hiện",rework,v1.0.0,Cần sửa ở P5
+r3_diag,B1-dense,adasind_001320.jpg,M3,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model bắt nhầm chi tiết kiến trúc lề đường thành vật thể (False Positive)",keep_with_reason,v1.0.0,Lỗi mô hình
+r3_diag,B1-dense,adasind_001320.jpg,M5,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model tạo box giả trên bề mặt phản chiếu ánh sáng",keep_with_reason,v1.0.0,False positive
+r3_diag,B1-dense,adasind_001320.jpg,M6,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model phát hiện sai đối tượng không tồn tại ở hậu cảnh xa",keep_with_reason,v1.0.0,Lỗi nhận diện model
+r3_diag,B1-dense,adasind_012570.jpg,L6+R6,LR_noM,MISSING,E4_model_domain,P2,ai_team,R04,"Model bỏ sót ThreeWheeler ở trung tâm do mật độ xe dày đặc",keep_with_reason,v1.0.0,L và R đều đúng
+r3_diag,B1-dense,adasind_012570.jpg,L5+R4,LR_noM,MISSING,E4_model_domain,P2,ai_team,R04,"Model không nhận diện được xe ba bánh ThreeWheeler đặc thù",keep_with_reason,v1.0.0,Domain gap phương tiện
+r3_diag,B1-dense,adasind_012570.jpg,L3+M12,LM_noR,SPURIOUS,E0_reference_defect,P2,guideline,R01,"Cả người và Model đều phát hiện Bike có H>40px tại x:505-545 y:950-1006 nhưng Reference bỏ sót",escalate,v1.0.0,Nghi vấn Reference thiếu sót
+r3_diag,B1-dense,adasind_012570.jpg,R9+M13,RM_noL,MISSING,E1_annotator_error,P1,annotator,R01,"Bike ở hậu cảnh x:330-360 bị Learner bỏ sót do vẽ box chưa ôm trọn",rework,v1.0.0,Cần sửa ở P5
+r3_diag,B1-dense,adasind_012570.jpg,M7,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model tạo box giả trên bóng đổ mặt đường",keep_with_reason,v1.0.0,Lỗi model
+r3_diag,B1-dense,adasind_012570.jpg,M8,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model tạo box thừa ở dải phân cách",keep_with_reason,v1.0.0,False positive
+r3_diag,B1-dense,adasind_012570.jpg,M10,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model phát hiện nhầm bóng người trên vỉa hè",keep_with_reason,v1.0.0,False positive
+r3_diag,B1-dense,adasind_012570.jpg,M11,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model tạo box giả trên biển quảng cáo",keep_with_reason,v1.0.0,False positive
+r3_diag,B1-dense,adasind_036720.jpg,L4+R4,LR_noM,MISSING,E4_model_domain,P2,ai_team,R03,"Bike ở mép trái edge zone bị méo hình fisheye khiến Model bỏ sót",keep_with_reason,v1.0.0,Domain gap mép kính
+r3_diag,B1-dense,adasind_036720.jpg,L2+R1,LR_noM,MISSING,E4_model_domain,P2,ai_team,R04,"ThreeWheeler tiền cảnh kích thước cực lớn bị cắt một phần khiến Model bỏ sót",keep_with_reason,v1.0.0,Vật thể cận cảnh
+r3_diag,B1-dense,adasind_036720.jpg,L1+R3,LR_noM,MISSING,E4_model_domain,P2,ai_team,R04,"ThreeWheeler ở xa bị Model bỏ sót",keep_with_reason,v1.0.0,Thiếu box xa
+r3_diag,B1-dense,adasind_036720.jpg,M1,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model tạo box giả trên chướng ngại vật tĩnh",keep_with_reason,v1.0.0,False positive
+r3_diag,B1-dense,adasind_036720.jpg,M2,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model nhận nhầm vạch kẻ đường thành xe",keep_with_reason,v1.0.0,False positive
+r3_diag,B1-dense,adasind_036720.jpg,M4,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model tạo box thừa ở mép kính",keep_with_reason,v1.0.0,False positive
+r3_diag,B1-dense,adasind_036720.jpg,M6,M_only,SPURIOUS,E4_model_domain,P3,ai_team,R01,"Model phát hiện sai đối tượng trong vùng bóng râm",keep_with_reason,v1.0.0,False positive
+

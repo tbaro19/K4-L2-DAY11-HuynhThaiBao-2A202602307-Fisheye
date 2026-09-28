@@ -1,0 +1,9 @@
+round: r1_craft
+slice: B1-dense
+sha256: 0d8de9beaa417d5f9ca65737f7edbaed0bbbdc4161787019fd39f6016aca6978
+code: 0D8D-E9BE
+locked_at: 2026-09-28T17:56:35+07:00
+shapes: box=18, polygon=9
+prefill_kept: 1
+prefill_edited: 2
+new: 15
